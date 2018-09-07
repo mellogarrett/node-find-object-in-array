@@ -1,7 +1,7 @@
 # node-find-object-in-array
 Helper function to find a particular Object in an Array of Objects
 
-###My use case:
+### My use case:
 I use this function in my DataLoader batch loading functions in GraphQL servers. Let's say you use the array of keys passed to your batch loading function to query a database; something like this:
 ```js
 const batchLoadingFunction = keys => {
@@ -20,5 +20,5 @@ const batchLoadingFunction = keys => {
   const keysWithData = keys.map(key => nodeFindObjectInArray(data, key));
 }
 ```
-###Why?
+### Why?
 The return value of a DataLoader batch loading function must be an Array with the same length, and in the same order as the key Array you passed. 
